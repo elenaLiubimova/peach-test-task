@@ -10,6 +10,16 @@
   color: #444;
 }
 
+@mixin proxima-regular {
+  font: {
+    family: 'Proxima Nova Condensed', Arial, sans-serif;
+    weight: 400;
+  }
+
+  color: #444;
+}
+
+
 .root {
   display: flex;
   flex-direction: column;
@@ -103,5 +113,40 @@
 
   &__text-accent {
     color: #B01736;
+  }
+}
+
+.digits {
+  display: flex;
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 185px;
+    margin: 0 auto;
+    min-width: 890px;
+    width: 100%;
+
+    list-style: none;
+  }
+}
+
+.list-item {
+  &__digit {
+    margin: 0;
+    
+    @include proxima-semibold;
+    color: #A30C33;
+    font-size: 80px;
+    line-height: .8;
+  }
+
+  &__description {
+    margin: 0;
+
+    @include proxima-regular;
+    font-size: 18px;
+    line-height: 1.5;
   }
 }

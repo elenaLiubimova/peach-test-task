@@ -3,11 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
     <title lang="ru">Softline</title>
   </head>
   <body class="root">
-    <header></header>
+    <header class="header container">
+      <img
+        class="header__logo"
+        src="<%=require('./images/logo.svg')%>"
+        alt="Лого Softline"
+      />
+      <nav>
+        <ul class="site-navigation">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#" target="_blank">Облачные решения</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#" target="_blank">Кибербезопасность</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#" target="_blank">Импортозамещение</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#" target="_blank">Цифровая трансформация</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main></main>
   </body>
 </html>

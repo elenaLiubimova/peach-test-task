@@ -1,2 +1,55 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
+
+@mixin nav-text {
+  font: {
+    family: 'Proxima Nova Condensed', Arial, sans-serif;
+    weight: 600;
+    size: 18px;
+  }
+
+  color: #444;
+}
+
+.root {
+  display: flex;
+}
+
+.container {
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 85px;
+  
+  &__logo {
+    width: 125px;
+    height: 25px;
+  }
+}
+
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    @include nav-text;
+    text-decoration: none;
+    transition: ease-out 0.2s;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}

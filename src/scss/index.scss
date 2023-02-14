@@ -150,3 +150,36 @@
     line-height: 1.5;
   }
 }
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 471px;
+  row-gap: 40px;
+  
+  background-color: #A30C33;
+  background-image: url(../images/mission.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+  &__title {
+    margin: 0 auto;
+    
+    @include proxima-semibold;
+    font-size: 56px;
+    line-height: 1;
+    color: #fff;
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+    max-width: 1110px;
+    
+    @include proxima-regular();
+    font-size: 32px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+  }
+}

@@ -176,10 +176,95 @@
     margin: 0 auto;
     max-width: 1110px;
     
-    @include proxima-regular();
+    @include proxima-regular;
     font-size: 32px;
     line-height: 1.5;
     color: #fff;
     text-align: center;
+  }
+}
+
+.bonuses {
+  max-width: 1110px;
+  padding: 80px 110px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+}
+
+.compensations {
+  &__title {
+    margin: 0 0 50px;
+    
+    @include proxima-semibold;
+    font-size: 56px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+}
+
+.card {
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+  width: 110px;
+  height: 110px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+
+  @include proxima-regular;
+  line-height: 1.1;
+
+  &__caption {
+    position: absolute;
+    bottom: -41.81px;
+
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.motivation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__title {
+    margin: 70px 0 4px;
+    
+    @include proxima-semibold;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 0 0 50px;
+
+    @include proxima-semibold;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    color: #B01736;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 43.24%;
+    justify-content: space-between;
   }
 }

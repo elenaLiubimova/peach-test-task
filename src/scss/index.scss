@@ -268,3 +268,81 @@
     justify-content: space-between;
   }
 }
+
+.business {
+  &__title {
+    margin: 100px 0 55px;
+    
+    @include proxima-semibold;
+    font-size: 56px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__hovered-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(615px, 1fr));
+    margin: 0;
+    padding: 0;
+    column-gap: 20px;
+    row-gap: 22px;
+
+    list-style: none;
+  }
+}
+
+.hovered-card {
+  position: relative;
+  
+  display: grid;
+  overflow: hidden;
+
+  cursor: pointer;
+  
+  &__picture {
+    width: 100%;
+
+    transition: ease-out 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    z-index: 1;
+
+    background-color: rgba(45, 54, 83, .6);
+
+    width: 100%;
+    height: 100%;
+
+    transition: top 0.8s;
+
+    &:hover {
+      top: 0;
+    }
+  }
+
+  &__title {
+    margin: 28px 0 20px 20px;
+    
+    @include proxima-semibold;
+    font-size: 24px;
+    line-height: 1;
+    color: #fff;
+  }
+
+  &__text {
+    width: 78%;
+    margin: 0 0 0 20px;
+    
+    @include proxima-regular;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #fff;
+  }
+}

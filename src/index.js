@@ -1,9 +1,6 @@
 import './scss/index.scss';
 
 import Swiper, { Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 const swiper = new Swiper('.swiper', {
   
@@ -19,6 +16,4 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
   },
-  mousewheel: true,
-  keyboard: true,
 });

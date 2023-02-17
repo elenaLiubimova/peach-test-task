@@ -1,6 +1,15 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 @import url(../../node_modules/swiper/swiper.css);
+@import url(../../node_modules/swiper/swiper-bundle.css);
+@import url(../../node_modules/swiper/swiper-bundle.min.css);
+@import url(../../node_modules/swiper/swiper-element-bundle.css);
+@import url(../../node_modules/swiper/swiper-element-bundle.min.css);
+@import url(../../node_modules/swiper/swiper-element.css);
+@import url(../../node_modules/swiper/swiper-element.min.css);
+@import url(../../node_modules/swiper/swiper.min.css);
+@import url(../../node_modules/swiper/modules/navigation/navigation.min.css);
+@import url(../../node_modules/swiper/modules/pagination/pagination.min.css);
 
 @mixin proxima-semibold {
   font: {
@@ -20,7 +29,6 @@
   color: #444;
 }
 
-
 .root {
   display: flex;
   flex-direction: column;
@@ -39,7 +47,7 @@
   flex-wrap: wrap;
   height: 85px;
   padding: 0 70px 0;
-  
+
   &__logo {
     width: 125px;
     height: 25px;
@@ -66,7 +74,7 @@
     transition: ease-out 0.2s;
 
     &:hover {
-      opacity: .6;
+      opacity: 0.6;
     }
   }
 }
@@ -89,7 +97,7 @@
     max-width: 709px;
     width: 100%;
     margin: 158px 0 0 70px;
-    
+
     @include proxima-semibold;
     font-size: 56px;
     line-height: 1;
@@ -113,13 +121,13 @@
   }
 
   &__text-accent {
-    color: #B01736;
+    color: #b01736;
   }
 }
 
 .digits {
   display: flex;
-  
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -136,11 +144,11 @@
 .list-item {
   &__digit {
     margin: 0;
-    
+
     @include proxima-semibold;
-    color: #A30C33;
+    color: #a30c33;
     font-size: 80px;
-    line-height: .8;
+    line-height: 0.8;
   }
 
   &__description {
@@ -158,15 +166,15 @@
   justify-content: center;
   min-height: 471px;
   row-gap: 40px;
-  
-  background-color: #A30C33;
+
+  background-color: #a30c33;
   background-image: url(../images/mission.svg);
   background-repeat: no-repeat;
   background-size: 100%;
-  
+
   &__title {
     margin: 0 auto;
-    
+
     @include proxima-semibold;
     font-size: 56px;
     line-height: 1;
@@ -176,7 +184,7 @@
   &__subtitle {
     margin: 0 auto;
     max-width: 1110px;
-    
+
     @include proxima-regular;
     font-size: 32px;
     line-height: 1.5;
@@ -194,7 +202,7 @@
 .compensations {
   &__title {
     margin: 0 0 50px;
-    
+
     @include proxima-semibold;
     font-size: 56px;
     line-height: 1;
@@ -214,7 +222,7 @@
 
 .card {
   position: relative;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,10 +248,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   &__title {
     margin: 70px 0 4px;
-    
+
     @include proxima-semibold;
     font-size: 40px;
     line-height: 1.2;
@@ -257,7 +265,7 @@
     font-size: 40px;
     line-height: 1.2;
     text-align: center;
-    color: #B01736;
+    color: #b01736;
   }
 
   &__cards {
@@ -273,7 +281,7 @@
 .business {
   &__title {
     margin: 100px 0 55px;
-    
+
     @include proxima-semibold;
     font-size: 56px;
     line-height: 1;
@@ -294,12 +302,12 @@
 
 .hovered-card {
   position: relative;
-  
+
   display: grid;
   overflow: hidden;
 
   cursor: pointer;
-  
+
   &__picture {
     width: 100%;
 
@@ -316,7 +324,7 @@
     left: 0;
     z-index: 1;
 
-    background-color: rgba(45, 54, 83, .6);
+    background-color: rgba(45, 54, 83, 0.6);
 
     width: 100%;
     height: 100%;
@@ -330,7 +338,7 @@
 
   &__title {
     margin: 28px 0 20px 20px;
-    
+
     @include proxima-semibold;
     font-size: 24px;
     line-height: 1;
@@ -340,7 +348,7 @@
   &__text {
     width: 78%;
     margin: 0 0 0 20px;
-    
+
     @include proxima-regular;
     font-size: 17px;
     line-height: 1.4;
@@ -349,53 +357,86 @@
 }
 
 .swiper {
-  &__slide {
-    max-width: 1100px;
-    width: 100%;
-    max-height: 834px;
-    height: 100%;
+  position: static;
+
+  max-width: 1100px;
+  width: 100%;
+  max-height: 834px;
+  height: 100%;
+
+  &__title {
+    @include proxima-semibold;
+    font-size: 56px;
+    line-height: 1;
   }
-  
+
+  &__buttons {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &-slide {
+    position: static;
+    
+    list-style: none;
+  }
+
   &__image {
+    position: static;
+    
     max-width: 1100px;
     width: 100%;
     max-height: 834px;
     height: 100%;
   }
-}
 
-.swiper {
-  display: flex;
-  flex-direction: column;
-}
-
-.swiper-button-prev {
-  z-index: 1;
+  &-button-prev {
+    position: static;
   
-  width: 56px;
-  height: 56px;
-  background-color: #F0F0F0;
-  border-radius: 50%;
-}
+    width: 56px;
+    height: 56px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 50%;
 
-.swiper-button-next {
-  z-index: 1;
+    // &::after {
+    //   content: '';
+
+    //   background-image: url(../images/arrow-left.svg);
+    // }
+  }
+
+  &-button-next {
+    position: static;
   
-  width: 56px;
-  height: 56px;
-  background-color: #F0F0F0;
-  border-radius: 50%;
-}
+    width: 56px;
+    height: 56px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+  }
 
-.swiper-slide {
-  width: 400px;
-  height: 400px;
+  &-wrapper {
+    position: static;
+    
+    margin: 0;
+    padding: 0;
+  }
 
-  list-style: none;
-}
+  &-pagination {
+    position: static;
+    
+    display: flex;
 
-.swiper-pagination {
-  background-color: #A30C33;
-  width: 214px;
-  height: 6px;
+    &-bullet {
+      position: static;
+      
+      display: block;
+      background-color: #a30c33;
+      border-radius: 0;
+      width: 214px;
+      height: 6px;
+    }
+  } 
+
 }

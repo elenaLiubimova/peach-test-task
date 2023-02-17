@@ -127,6 +127,7 @@
 
 .digits {
   display: flex;
+  padding: 100px 0;
 
   &__list {
     display: flex;
@@ -138,6 +139,81 @@
     width: 100%;
 
     list-style: none;
+  }
+}
+
+.map {
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding: 0 70px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+  }
+
+  &__image {
+  }
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  gap: 30px;
+
+  &__item { 
+    display: flex;
+    align-items: center;
+    height: 80px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #fff;
+    
+    @include proxima-semibold;
+    font-size: 18px;
+    line-height: 1.11;
+    list-style: none;
+
+    cursor: pointer;
+
+    &_selected {
+      border-bottom: 3px solid #a30c33;
+      
+      color: #a30c33;
+    }
+  }
+}
+
+.falling-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+
+  &__title {
+    margin: 0;
+    
+    @include proxima-semibold;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  &__button {
+    width: 20px;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-image: url(../images/falling-arrow.svg);
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    cursor: pointer;
   }
 }
 
@@ -377,13 +453,13 @@
 
   &-slide {
     position: static;
-    
+
     list-style: none;
   }
 
   &__image {
     position: static;
-    
+
     max-width: 1100px;
     width: 100%;
     max-height: 834px;
@@ -392,7 +468,7 @@
 
   &-button-prev {
     position: static;
-  
+
     width: 56px;
     height: 56px;
     border: none;
@@ -408,7 +484,7 @@
 
   &-button-next {
     position: static;
-  
+
     width: 56px;
     height: 56px;
     border: none;
@@ -418,25 +494,24 @@
 
   &-wrapper {
     position: static;
-    
+
     margin: 0;
     padding: 0;
   }
 
   &-pagination {
     position: static;
-    
+
     display: flex;
 
     &-bullet {
       position: static;
-      
+
       display: block;
       background-color: #a30c33;
       border-radius: 0;
       width: 214px;
       height: 6px;
     }
-  } 
-
+  }
 }

@@ -1,12 +1,10 @@
-export class citiesMap {
+export class CitiesMap {
   constructor() {
     this._map = document.querySelector('.map__image');
 
     this._menu = document.querySelector('.menu');
     this._items = this._menu.querySelectorAll('.menu__item');
     this._mapItems = this._map.querySelectorAll('.map__item');
-    this._moscowItem = this._menu.querySelector('#moscow');
-    this._centerItem = this._menu.querySelector('#center');
 
     this._nordWest = this._map.querySelectorAll('.nord-west');
     this._center = this._map.querySelectorAll('.center');
